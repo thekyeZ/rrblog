@@ -1,8 +1,36 @@
-<% provide(:title, "Home") %><!DOCTYPE html>
+<section id="wrapper">
 
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+  <header id="header">
+    <a id="title" class="index">Blog</a>
+  </header>
+
+  <ul id="post-list">
+
+    <li>
+      <a href='/posts/getting-started.html'><aside class="dates">Nov 25</aside></a>
+      <a href='/posts/getting-started.html'>Getting started <h2>An introduction.</h2></a>
+    </li>
+
+    <li>
+      <a href='/posts/an-example-post.html'><aside class="dates">Oct 11</aside></a>
+      <a href='/posts/an-example-post.html'>An example post <h2>Filled with sample content.</h2></a>
+    </li>
+
+    <li>
+      <a href='/posts/another-example.html'><aside class="dates">Sep 15</aside></a>
+      <a href='/posts/another-example.html'>Another example <h2>Set up with Markdown.</h2></a>
+    </li>
+
+  </ul>
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+
+  <%= link_to image_tag("rails.png", alt: "Rails logo"),
+              'http://rubyonrails.org/' %>
+
+
+  <footer id="footer">
+    <p class="small">A short description</p>
+  </footer>
+
+</section>
