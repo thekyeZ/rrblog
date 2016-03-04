@@ -215,3 +215,27 @@ input {
     color: #2E2F30;
   }
 }
+
+.users {
+  padding: 0 100px;
+    display: flex;
+  flex-direction: column;
+
+    li{
+      display: flex;
+      list-style: none;
+      width: 100vh;
+      height: 100px;
+      margin: 10px;
+      align-items: center;
+      a{
+        font-size: 1.5em;
+        color: #2E2F30;
+        font-family: 'Nunito', sans-serif;
+      }
+      img{
+        width: 100px;
+      }
+    }
+
+}
