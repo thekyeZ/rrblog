@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
 
   def home
+
+    @posts = Micropost.all;
+
   end
 
   def help

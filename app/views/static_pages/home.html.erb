@@ -7,26 +7,15 @@
 
   <ul id="post-list">
 
-    <li>
-      <a href='/posts/getting-started.html'><aside class="dates">Nov 25</aside></a>
-      <a href='/posts/getting-started.html'>Getting started <h2>An introduction.</h2></a>
-    </li>
+    <%= @posts.each do |p| %>
 
-    <li>
-      <a href='/posts/an-example-post.html'><aside class="dates">Oct 11</aside></a>
-      <a href='/posts/an-example-post.html'>An example post <h2>Filled with sample content.</h2></a>
-    </li>
+      <%= render 'posts', post: p %>
 
-    <li>
-      <a href='/posts/another-example.html'><aside class="dates">Sep 15</aside></a>
-      <a href='/posts/another-example.html'>Another example <h2>Set up with Markdown.</h2></a>
-    </li>
+    <% end %>
 
   </ul>
 
   <%= link_to "Sign up now!", '#', class: "" %>
-
-
 
   <footer id="footer">
     <p class="small">A short description</p>

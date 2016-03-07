@@ -1,0 +1,4 @@
+<li id="micropost-<%= micropost.id %>">
+  <a href='<%= micropost_path%>'><aside class="dates"><%= micropost.created_at %></aside></a>
+  <a href='<%= micropost_path%>'><%= truncate(micropost.content, :length => 20) %> <h2><%= truncate(micropost.content, :length => 40) %></h2></a>
+</li>

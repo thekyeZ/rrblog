@@ -18,26 +18,16 @@
   </aside>
 
   <section class="main-user-profile">
-    <h2>Your posts</h2>
+    <% if @user.microposts.any? %>
+        <h3>Microposts (<%= @user.microposts.count %>)</h3>
 
-    <ul id="post-list">
 
-      <li>
-        <a href='/posts/getting-started.html'><aside class="dates">Nov 25</aside></a>
-        <a href='/posts/getting-started.html'>Getting started <h2>An introduction.</h2></a>
-      </li>
+        <ul id="post-list">
+            <%= render @microposts %>
+        </ul>
+          <%= will_paginate @microposts %>
+      <% end %>
 
-      <li>
-        <a href='/posts/an-example-post.html'><aside class="dates">Oct 11</aside></a>
-        <a href='/posts/an-example-post.html'>An example post <h2>Filled with sample content.</h2></a>
-      </li>
-
-      <li>
-        <a href='/posts/another-example.html'><aside class="dates">Sep 15</aside></a>
-        <a href='/posts/another-example.html'>Another example <h2>Set up with Markdown.</h2></a>
-      </li>
-
-    </ul>
 
   </section>
 </div>
